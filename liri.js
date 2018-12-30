@@ -1,6 +1,6 @@
 require("dotenv").config();
 var fs = require("fs");
-var keys = require("key.js");
+var keys = require("./keys.js");
 var request = require('request');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
@@ -32,9 +32,10 @@ function switchCase() {
       getRandom();
       break;
 
-      default:                            
-      logIt("Invalid Instruction");
-      break;
+    default:                            
+    logIt("Invalid Instruction");
+    break;
+
 
   }
 };
